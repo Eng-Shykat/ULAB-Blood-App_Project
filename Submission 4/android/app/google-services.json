@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "621905064804",
+    "firebase_url": "https://ulab-blood-bank-c3665-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ulab-blood-bank-c3665",
+    "storage_bucket": "ulab-blood-bank-c3665.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621905064804:android:df02d5f8a030a25ab90071",
+        "android_client_info": {
+          "package_name": "bd.edu.ulab.ulab_blood_bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621905064804-u7tk10n2sf4eki41ohhv8ea9k3qvlph7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrVGRgszlnDV1kf7Xc0-i4Cv3mVChByyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621905064804-u7tk10n2sf4eki41ohhv8ea9k3qvlph7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
