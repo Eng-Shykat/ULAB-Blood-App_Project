@@ -45,6 +45,7 @@ class UserDataModel {
       phone: json['phone'],
       gender: json['gender'],
       dateOfBirth: json['dateOfBirth'],
+      lastDonatedDate: json['lastDonatedDate'],
       address: json['address'],
       bloodGroup: json['bloodGroup'],
       hasAnyBloodDiseaseBefore: json['hasAnyBloodDiseaseBefore'],

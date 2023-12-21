@@ -29,6 +29,11 @@ class AuthRepository {
       await _auth.createUserWithEmailAndPassword(
           email: userDataModel.email, password: password);
       await _storeInDB(userDataModel);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Your account details have been saved."),
+        ),
+      );
     } on FirebaseAuthException catch (e, s) {
       print(e.message);
       ScaffoldMessenger.of(context).showSnackBar(

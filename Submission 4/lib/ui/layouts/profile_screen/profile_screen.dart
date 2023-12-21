@@ -78,22 +78,22 @@ class ProfileScreen extends ConsumerWidget {
                 ),
               ),
               verticalGap24,
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primaryPalette,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: const Text(
-                  "Want to Donate",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {},
+              //   style: ElevatedButton.styleFrom(
+              //     backgroundColor: AppColors.primaryPalette,
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(8),
+              //     ),
+              //   ),
+              //   child: const Text(
+              //     "Want to Donate",
+              //     style: TextStyle(color: Colors.white),
+              //   ),
+              // ),
               verticalGap16,
               const Text(
-                "Badges",
+                "Donate blood, save lives.",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -305,8 +305,8 @@ class ProfileScreen extends ConsumerWidget {
     }
 
     Widget buildLoading() => const Center(
-          child: CircularProgressIndicator(),
-        );
+      child: CircularProgressIndicator(),
+    );
 
     Widget buildError(e, s) {
       return Center(

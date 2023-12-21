@@ -351,7 +351,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                         value: ref.watch(donatedBeforeProvider),
                         onChanged: (String? value) {
                           ref.read(donatedBeforeProvider.notifier).state =
-                              value!;
+                          value!;
                         },
                         items: decisionBool
                             .map<DropdownMenuItem<String>>((String value) {
@@ -404,7 +404,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                         value: ref.watch(bloodDiseaseProvider),
                         onChanged: (String? value) {
                           ref.read(bloodDiseaseProvider.notifier).state =
-                              value!;
+                          value!;
                         },
                         items: decisionBool
                             .map<DropdownMenuItem<String>>((String value) {
@@ -438,7 +438,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       });
                     },
                     fillColor:
-                        MaterialStateProperty.all(AppColors.primaryPalette),
+                    MaterialStateProperty.all(AppColors.primaryPalette),
                     checkColor: Colors.white,
                   ),
                   Text(
@@ -457,7 +457,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       });
                     },
                     fillColor:
-                        MaterialStateProperty.all(AppColors.primaryPalette),
+                    MaterialStateProperty.all(AppColors.primaryPalette),
                     checkColor: Colors.white,
                   ),
                   Text(
@@ -477,19 +477,19 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   final gender = ref.read(genderProvider);
                   final bloodGroup = ref.read(bloodGroupProvider);
                   final hasAnyBloodDiseaseBefore =
-                      ref.read(bloodDiseaseProvider);
+                  ref.read(bloodDiseaseProvider);
 
                   final fullName = fullNameController.text.toString().trim();
                   final dateOfBirth =
-                      dateOfBirthController.text.toString().trim();
+                  dateOfBirthController.text.toString().trim();
                   final password = passwordController.text.toString().trim();
                   final confirmPassword =
-                      confirmPasswordController.text.toString().trim();
+                  confirmPasswordController.text.toString().trim();
                   final email = emailController.text.toString().trim();
                   final phone = phoneController.text.toString().trim();
                   final address = addressController.text.toString().trim();
                   final lastDonationDate =
-                      lastDonationDateController.text.toString().trim();
+                  lastDonationDateController.text.toString().trim();
 
                   if (isAgree && isAccepted) {
                     if (fullName.isNotEmpty &&
@@ -513,14 +513,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                               address: address,
                               bloodGroup: bloodGroup,
                               donatedBefore:
-                                  ref.read(donatedBeforeProvider) == 'Yes'
-                                      ? true
-                                      : false,
+                              ref.read(donatedBeforeProvider) == 'Yes'
+                                  ? true
+                                  : false,
                               lastDonatedDate: lastDonationDate,
                               hasAnyBloodDiseaseBefore:
-                                  hasAnyBloodDiseaseBefore == 'Yes'
-                                      ? true
-                                      : false,
+                              hasAnyBloodDiseaseBefore == 'Yes'
+                                  ? true
+                                  : false,
                             ),
                             password,
                             context,
@@ -550,7 +550,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content:
-                            Text("Please agree with the terms and conditions"),
+                        Text("Please agree with the terms and conditions"),
                       ),
                     );
                   }
@@ -592,7 +592,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
     return InputDecoration(
       hintText: hintText ?? "",
       contentPadding:
-          const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
       disabledBorder: InputBorder.none,
       enabledBorder: const OutlineInputBorder(
         borderRadius: BorderRadius.all(

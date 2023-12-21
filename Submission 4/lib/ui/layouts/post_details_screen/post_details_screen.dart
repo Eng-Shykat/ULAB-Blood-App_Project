@@ -178,7 +178,7 @@ class PostDetailsScreen extends ConsumerWidget {
               height: 50,
               child: ElevatedButton(
                 onPressed: () async {
-                  /*ref.read(firestoreProvider).collection("notifications").add({
+                  ref.read(firestoreProvider).collection("notifications").add({
                     "userId": postDataModel.userId,
                     "donorId": FirebaseAuth.instance.currentUser!.uid,
                     "userName": postDataModel.userName,
@@ -187,14 +187,14 @@ class PostDetailsScreen extends ConsumerWidget {
                     "urgency": postDataModel.urgency,
                     "amountOfBlood": postDataModel.amountOfBlood,
                     "createdAt": DateTime.now().toString(),
-                  });*/
+                  });
                   final docRef = ref
                       .read(firestoreProvider)
                       .collection('notification')
                       .doc();
                   final docId = docRef.id;
                   NotificationDataModel notificationDataModel =
-                      NotificationDataModel(
+                  NotificationDataModel(
                     userId: postDataModel.userId,
                     donorId: FirebaseAuth.instance.currentUser!.uid,
                     userName: postDataModel.userName,

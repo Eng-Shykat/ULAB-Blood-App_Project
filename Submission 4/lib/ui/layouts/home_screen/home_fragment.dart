@@ -32,6 +32,12 @@ class _HomeFragmentState extends ConsumerState<HomeFragment> {
           date2.difference(DateTime.parse(userData!.lastDonatedDate!)).inDays;
     }
 
+    final dateDiffer = DateTime.now()
+        .difference(DateTime.parse(userData!.lastDonatedDate!))
+        .inDays;
+
+    final datePercent = dateDiffer / 90;
+
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,10 +76,9 @@ class _HomeFragmentState extends ConsumerState<HomeFragment> {
               height: 100,
               child: Center(
                 child: ProgressBar(
-                  dateCount: DateTime.now()
-                      .difference(DateTime.parse(userData!.lastDonatedDate!))
-                      .inDays,
-                  progress: .75,
+                  dateCount: dateDiffer,
+                  progress: datePercent,
+
                 ),
               ),
             ),
@@ -89,7 +94,7 @@ class _HomeFragmentState extends ConsumerState<HomeFragment> {
                 ),
               ),
               child: const Text(
-                "PATIENTS SAVED  06",
+                "PATIENTS SAVED  01",
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'RobotoSlab',
@@ -127,7 +132,9 @@ class _HomeFragmentState extends ConsumerState<HomeFragment> {
           ),
           verticalGap36,
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              print("Donate Blood ; Dhaka, Red Crescent Blood Bank. 7/5, Aurongzeb Road, Mohammadpur, Dhaka. Telephone: 02 41023562");
+            },
             child: Card(
               elevation: 10,
               color: AppColors.colorSecondaryBlack,

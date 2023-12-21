@@ -22,7 +22,7 @@ class _NotificationScreenState extends ConsumerState<NotificationScreen> {
     Widget buildBody(
         QuerySnapshot<NotificationDataModel> notificationDataModels) {
       List<NotificationDataModel> notifications =
-          notificationDataModels.docs.map((e) => e.data()).toList();
+      notificationDataModels.docs.map((e) => e.data()).toList();
       return Column(
         children: [
           const SizedBox(
@@ -58,7 +58,7 @@ class _NotificationScreenState extends ConsumerState<NotificationScreen> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: notifications.length,
               itemBuilder: (_, index) {
                 return SingleNotification(
                     notificationDataModel: notifications[index]);
@@ -70,8 +70,8 @@ class _NotificationScreenState extends ConsumerState<NotificationScreen> {
     }
 
     Widget buildLoading() => const Center(
-          child: CircularProgressIndicator(),
-        );
+      child: CircularProgressIndicator(),
+    );
 
     Widget buildError(e, s) {
       return Center(

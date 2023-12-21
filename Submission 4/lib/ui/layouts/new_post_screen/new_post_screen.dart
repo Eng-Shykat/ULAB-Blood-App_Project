@@ -143,7 +143,7 @@ class _NewPostScreenState extends ConsumerState<NewPostScreen> {
                     ref.read(urgencyTypeProvider.notifier).state = value!;
                   },
                   items:
-                      urgencyType.map<DropdownMenuItem<String>>((String value) {
+                  urgencyType.map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(value),
@@ -188,9 +188,9 @@ class _NewPostScreenState extends ConsumerState<NewPostScreen> {
                       final userName = userRef.docs[0].data()["name"];
 
                       if (_amountOfBloodController.text
-                              .toString()
-                              .trim()
-                              .isEmpty ||
+                          .toString()
+                          .trim()
+                          .isEmpty ||
                           _locationController.text.toString().trim().isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
@@ -205,21 +205,26 @@ class _NewPostScreenState extends ConsumerState<NewPostScreen> {
                         final postDataModel = PostDataModel(
                           id: postRef.id,
                           bloodGroup:
-                              _bloodGroupList[ref.read(selectedBloodProvider)],
+                          _bloodGroupList[ref.read(selectedBloodProvider)],
                           amountOfBlood: _amountOfBloodController.text,
                           urgency: ref.read(urgencyTypeProvider),
                           location: _locationController.text,
                           userName: userName,
                           userId: uid,
                           createdAt:
-                              DateTime.now().microsecondsSinceEpoch.toString(),
+                          DateTime.now().microsecondsSinceEpoch.toString(),
                         );
                         await postRef.set(postDataModel.toJson());
 
                         _locationController.clear();
                         _amountOfBloodController.clear();
                         ref.read(urgencyTypeProvider.notifier).state =
-                            urgencyType[0];
+                        urgencyType[0];
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text("Blood Post Successfull"),
+                          ),
+                        );
                       }
                     },
                     child: const Text(
@@ -245,7 +250,7 @@ class _NewPostScreenState extends ConsumerState<NewPostScreen> {
     return InputDecoration(
       hintText: hintText ?? "",
       contentPadding:
-          const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
       disabledBorder: InputBorder.none,
       enabledBorder: const OutlineInputBorder(
         borderRadius: BorderRadius.all(
